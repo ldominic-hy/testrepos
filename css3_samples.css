@@ -1,0 +1,63 @@
+/* first a few basic styles */
+label{
+	display:block;
+}
+#maincont{
+	margin-right:0px;
+}
+/*
+challenge A:
+set the property (opacity)
+to be transitioned over 1 second (1s)
+using timing funtion (ease)
+*/
+#image_top{
+	position:absolute;
+	top:0px;
+	left:0px;
+	transition:opacity 1s ease;
+}
+/*
+challenge A:
+set a property (opacity) to be different 
+on user mouseover
+*/
+#image_top:hover{
+	opacity:0;
+}
+/* 
+challenge A
+following is the yellow image positioned underneath 
+this is the image that will display when the green
+ image in front is tranparent
+*/
+#transition_image{
+	position:relative;
+	margin-right:30px;
+	float:right;
+}
+
+
+/*
+challenge B:
+to ensure predictable behavior,
+all properties must be explicity set here (the initial state)
+as well as in the transition (the :focus state)
+
+note the use of 'all' as the property to transition more
+than one proeprty simultaneously
+*/
+input{
+	width:300px;
+	height:15px;
+	transition:all .5s ease;
+	border:solid 1px black;
+}
+input:focus{
+	width:310px;
+	height:20px;
+	border:solid 4px orange;
+}
+
+
+

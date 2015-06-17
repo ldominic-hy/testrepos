@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>comp 1950 | lecture five: CSS3</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="http://bcitcomp.ca/comp1950/css/comp1.css" media="screen" />
+	<link type="text/css" rel="stylesheet" href="css3_samples.css" />
+
+</head>
+<body>
+<div id="maincont">
+
+		<h1>CSS3 Transitions Exercises</h1>
+
+
+<div class="contblock">
+
+<p>The basic 3 components of defining transitions can be declared in one line with the shorthand format (transition:property duration timing-function;), for example:
+</p>
+<code>-webkit-transition:background 0.6s ease;</code>
+		<p>Change the flow of the animation with these timing functions:</p>
+		<ul>
+		<li><code>ease</code></li>		
+		<li><code>ease-in</code></li>		
+		<li><code>linear</code></li>		
+		<li><code>ease-out</code></li>		
+		<li><code>cubic-bezier</code> (define your own timing curve)</li>		
+		</ul>
+</div>
+
+<h2>Exercise</h2>
+<div class="contblock">
+
+	<div id="transition_image">
+<img src="images/button_green.png" 
+	 id="image_bottom"
+	 alt="yellow button" 
+	 width="100px" height="100px" />	
+<img src="images/button_yellow.png" 
+	 id="image_top"
+	 alt="yellow button" 
+	 width="100px" height="100px" />	
+
+	</div>
+	<h3>Challenge A:</h3>
+	<p>The yellow button image is absolutely positioned so that it overlaps a green button image beneath it.</p>
+
+	<ul>
+		<li>First add a :hover pseudoclass to the <code>id="image_top"</code> that will set it's <code>opacity</code> to 0;</li>
+		<li>Then add the transition states: First apply a transition to the opacity of <code>#image_top</code>. Note how the transtion is applied to both the :hover and non-hover states.</li>
+		<li>Relocate the transition code from <code>#image_top</code> to <code>#image_top:hover</code>. Note how the transtion is applied to only the change from non-hover to :hover.</li>
+		<li>For full control over this behavior, define transition code in both the before (#image_top) and after (#image_top:hover) rules.</li>
+
+		<li>Follow the pattern:<br />
+		<code>-vendorprefix-transition:property duration timing-function;</code></li>
+		<li>use the notes below to guide to on the syntax</li>
+		<li>demonstrate the finished transition to your instructor</li>
+	</ul>
+
+		<h3>Challenge B:</h3>
+
+		<p>Add transtion code that will alter the width or the height of the form inputs when they are in the 	<code>focus</code> state.</p>
+		<ul>
+			<li>transition either the width or the height. note how you will need to set the width in CSS for both the :focus and not :focused states.</li>
+			<li>try transitioning several CSS properties (<code>width</code>, <code>height</code> and <code>border</code>) at once by using <code>all</code> as the assigned transitional property, eg: <code>transition:all 1s ease;</code></li>
+			
+		</ul>
+		<form>
+		<label for="username">Username</label>	
+		<input	type="text" 
+					name="username" 
+					id="username" />
+		<label for="password">Password</label>	
+		<input	type="text" 
+					name="password" 
+					id="password" />
+		</form>
+</div>
+</div>
+</body>
+</html>
+
